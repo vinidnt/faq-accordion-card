@@ -67,7 +67,11 @@
     outline: none;
     font-size: 14px;
 }
-.active{
+.collapsible:hover{
+    color: grey;
+}
+.active, .active:hover{
+    color: black;
     font-weight: bold;
 } 
 .content{
@@ -85,9 +89,11 @@ p{
 .arrow{
     float: right;
     margin-top: 7px;
+    transition: transform 0.4s ease;
 }
 .arrow-up{
     transform: rotate(180deg);
+    transition: transform 0.4s ease;
 }
 .row{
     border-top: 1px solid var(--light-greyish-blue);
