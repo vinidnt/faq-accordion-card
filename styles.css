@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    font-family: "Kumbh Sans", sans-serif;
+    font-weight: 400;
+}
+
+:root{
+    /*Text*/
+	--very-dark-desatured-blue: sl(238, 29%, 16%);
+    --soft-red: sl(14, 88%, 65%);
+    --very-dark-grayish-blue: hsl(237, 12%, 33%);
+    --dark-grayish-blue: hsl(240, 6%, 50%);
+    /*Background gradient*/
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+    /*Dividers*/
+    --light-greyish-blue: hsl(240, 5%, 91%);
+    height: 100vh;
+    background-image: linear-gradient(var(--soft-violet), var(--soft-blue));
+    padding: 150px 10px 10px 10px;    
+}
+.card{
+    margin: auto;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 25px;
+    padding: 25px 25px 50px 25px;
+    box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.301);
+}
+.img-complete{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 250px;
+    margin: auto;
+}
+.illustration{  
+    margin: -137px auto 0px auto;
+    width: 250px;
+    z-index: 0;
+}
+.shadow{
+    content: url(./images/bg-pattern-desktop.svg);
+    width: 250px;
+    margin: -215px auto 0px auto;
+}
+.box{
+    margin: -150px 200px 0px auto;
+    width: 100px;
+    z-index: 1;
+}
+.title{
+    margin-top: 80px;
+    text-align: center;
+    font-weight: 700;
+}
+.collapsible{
+    background-color: white;
+    cursor: pointer;
+    padding: 20px 0px 20px 0px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 14px;
+}
+.active{
+    font-weight: bold;
+} 
+.content{
+    color: var(--dark-grayish-blue);
+    margin-right: 50px;
+    display: none;
+    overflow: hidden;
+}
+p{
+    margin: 0px 0px 20px 0px;
+}
+.coll-section{
+    font-size: 12px;
+}
+.arrow{
+    float: right;
+    margin-top: 7px;
+}
+.arrow-up{
+    transform: rotate(180deg);
+}
+.row{
+    border-top: 1px solid var(--light-greyish-blue);
+}
+
+@media only screen and (min-width: 920px) { 
+
+    .card{
+        max-width: 850px;
+        display: flex;
+        flex-direction: row;  
+        overflow: hidden;
+    }
+    .main{
+        width: 45%;
+        margin-right: 80px;
+        margin-left: 80px;
+    }
+    .title{
+        margin-top: 30px;
+        text-align: left;
+        font-weight: 700;
+    }
+    .img-complete{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+        width: 250px;
+        max-height: 200px;
+        margin-top: 80px;
+    }
+    .illustration{  
+        margin: 0px 0px 0px -130px;
+        width: 400px;
+        z-index: 0;
+    }
+    .shadow{
+        content: url(./images/bg-pattern-desktop.svg);
+        width: 900px;
+        margin: -675px auto auto -630px;
+    }
+    .box{
+        box-sizing: border-box;
+        position: absolute;
+        margin: 130px 75px 75px -120px;        
+        width: 130px;
+    }
+}
